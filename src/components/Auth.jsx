@@ -5,11 +5,8 @@ import { signInWithPopup } from 'firebase/auth'
 import Cookies from 'universal-cookie'
 const cookies = new Cookies()
 
-interface AuthProps {
-  setIsAuth: (isAuth: boolean) => void;
-}
 
-const Auth: React.FC<AuthProps> = (props) => {
+const Auth = (props) => {
   const { setIsAuth } = props
 
   const SignInWithGoogle = async () => {
