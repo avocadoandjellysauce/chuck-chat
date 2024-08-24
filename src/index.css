@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.room-name{
+  font-size: 10px;
+  font-weight: 400;
+  margin-left: 1rem;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+.new-message-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.send-button, .enter-room-btn{
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  height: 36px;
+  line-height: 34px;
+  font-size: 14px;
+  color: #241c15;
+  background-color: #efeeea;
+  transition: background-color 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s;
+  padding: 0 30px;
+  margin-left: 1rem;
+  :hover {
+      color: #241c15;
+      background-color: #d9d7cd;
+  }
+
+}
+
+input {
+  padding: 7px;
+  border-radius: 4px;
+  font-size: 13px;
+  background: #fbfbfb;
+  border: 2px solid transparent;
+  height: 36px;
+  width: 60%;
+  box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%);
+  outline:none;
+  :focus{
+      border: none;
+      border-radius: 4px;
+  }
+
+}
+
+.messages-container {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  overflow-y: auto;
+  flex-grow: 1;
+  max-height: 75vh;
+  border: 1px solid hsl(0, 0%, 80%, .5);
+  border-radius: 5px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+li + li {
+	margin-top: 1rem;
+}
+
+li {
+	display: flex;
+	align-items: center;
+  font-size: 10px;
+  font-weight: 400;
+	margin: 0.4rem;
+	background: aliceblue;
+	padding: 0.4rem 1rem;
+	border-radius: 1rem;
+	width: calc(100% - 4rem);
+	box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+}
+
+.sent {
+	flex-direction: row-reverse;
+	background: rgb(208, 247, 208);
+	margin-right: -2rem;
+	margin-left: 2rem;
+}
+
+.message-name{
+  font-size: 8px;
+  font-weight: 300;
+}
+
+.time-sent{
+  font-size: 7px;
+  font-weight: 300;
+}
+
+
+/* main page */
+.sign-out-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.chuck-chat-title{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sign-in-btn{
+  border: 1px solid black;
+  padding: 0.8rem;
+  border-radius: 20px;
+}
